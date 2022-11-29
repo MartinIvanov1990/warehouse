@@ -5,7 +5,7 @@ import warehouse.project.entity.Product;
 import warehouse.project.entity.Warehouse;
 
 import java.io.File;
-import java.io.FileNotFoundException;  // за какво е това ? да питам Да
+import java.io.FileNotFoundException;  //за кечване изключенията
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
