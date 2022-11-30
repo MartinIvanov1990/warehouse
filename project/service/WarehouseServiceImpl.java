@@ -25,22 +25,24 @@ public class WarehouseServiceImpl implements WarehouseService {
         String inputFile1 = sc.nextLine();
         String inputFile2 = sc.nextLine();
 
+try {
+    while (!inputFile1.equalsIgnoreCase("employee.csv")) {
+        System.out.println("Invalid input! Please write employee.csv :");
+        inputFile1 = sc.nextLine();
+    }
+    Scanner fileReader = new Scanner(new File(inputFile1), "windows-1251");
+    employeeData = fileReader.nextLine();
 
-        while (!inputFile1.equalsIgnoreCase("employee.csv")) {
-            System.out.println("Invalid input! Please write employee.csv :");
-            inputFile1 = sc.nextLine();
-        }
-        Scanner fileReader = new Scanner(new File(inputFile1), "windows-1251");
-        employeeData = fileReader.nextLine();
+    while (!inputFile1.equalsIgnoreCase("products.csv")) {
+        System.out.println("Invalid input! Please write products.csv :");
+        inputFile1 = sc.nextLine();
+    }
 
-        while (!inputFile1.equalsIgnoreCase("products.csv")) {
-            System.out.println("Invalid input! Please write products.csv :");
-            inputFile1 = sc.nextLine();
-        }
-
-        fileReader = new Scanner(new File(inputFile2));
-        productData = fileReader.nextLine();
-
+    fileReader = new Scanner(new File(inputFile2));
+    productData = fileReader.nextLine();
+}  catch (FileNotFoundException e) {
+    System.out.println("Their is some problem with read creating or reading file employee.csv ");
+    }
 
         //TODO: Implement logic to enter file's names and invoke 'processFile' method
 
