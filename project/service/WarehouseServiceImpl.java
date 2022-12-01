@@ -41,7 +41,7 @@ try {
     fileReader = new Scanner(new File(inputFile2));
     productData = fileReader.nextLine();
 }  catch (FileNotFoundException e) {
-    System.out.println("Their is some problem with read creating or reading file employee.csv ");
+    System.out.println("Their is some problem with read creating or reading files ");
     }
 
         //TODO: Implement logic to enter file's names and invoke 'processFile' method
@@ -80,64 +80,69 @@ try {
 
         List<Product> products = new ArrayList<Product>();
         List<Employee> employees = new ArrayList<Employee>();
+try {
+    while (scan.hasNext ())  //returns a boolean value
+    {
 
-        while (scan.hasNext())  //returns a boolean value
-        {
-
-            String productInfo = scan.next();
-            int count = 1;
-            int id = 0;
-            String name = "";
-            double price = 0;
-            int quantity = 0;
-            String type = "";
-            String color = "";
-            String expirationDate = "";
-            switch (count) {
-                case 1:
-                    id = Integer.parseInt(productInfo);
-                    break;
-                case 2:
-                    name = productInfo;
-                    break;
-                case 3:
-                    price = Double.parseDouble(productInfo);
-                    break;
-                case 4:
-                    quantity = Integer.parseInt(productInfo);
-                    break;
-                case 5:
-                    type = productInfo;
-                    break;
-                case 6:
-                    color = productInfo;
-                    break;
-                case 7:
-                    expirationDate = productInfo;
-                    break;
-            }
-            count++;
-            if (count == 8) {
-                count = 1;
-            }
-            Product product = new Product(id, name, price, quantity, type, color, expirationDate);
-            products.add(product);
-
+        String productInfo = scan.next ();
+        int count = 1;
+        int id = 0;
+        String name = "";
+        double price = 0;
+        int quantity = 0;
+        String type = "";
+        String color = "";
+        String expirationDate = "";
+        switch (count) {
+            case 1:
+                id = Integer.parseInt (productInfo);
+                break;
+            case 2:
+                name = productInfo;
+                break;
+            case 3:
+                price = Double.parseDouble (productInfo);
+                break;
+            case 4:
+                quantity = Integer.parseInt (productInfo);
+                break;
+            case 5:
+                type = productInfo;
+                break;
+            case 6:
+                color = productInfo;
+                break;
+            case 7:
+                expirationDate = productInfo;
+                break;
         }
+        count++;
+        if (count == 8) {
+            count = 1;
+        }
+        Product product = new Product (id, name, price, quantity, type, color, expirationDate);
+        products.add (product);
+
+    }
+} catch (Exception e) {
+    System.out.println("Their is some problem with read creating or reading files");
+}
+
 
         scan = new Scanner(new File("employee.csv"));
         scan.useDelimiter(",");
         while (scan.hasNext())  //returns a boolean value
         {
             int count = 1;
-            String employeeInfo = scan.next();
+            String employeeInfo = scan.next ();
             int id = 0;
             String lastName = "";
             String firstName = "";
             double salary = 0;
+            int age = 0;
             switch (count) {
                 case 1:
-                    id = Integer.parseInt(employeeInfo);
+                    id = Integer.parseInt (employeeInfo);
                     break;
                 case 2:
                     firstName = employeeInfo;
@@ -146,10 +151,10 @@ try {
                     lastName = employeeInfo;
                     break;
                 case 4:
-                    int age = Integer.parseInt(employeeInfo);
+                    age = Integer.parseInt (employeeInfo);
                     break;
                 case 5:
-                    salary = Double.parseDouble(employeeInfo);
+                    salary = Double.parseDouble (employeeInfo);
                     break;
             }
             count++;
@@ -157,8 +162,8 @@ try {
                 count = 1;
             }
 
-            Employee employee = new Employee(id, firstName, lastName, age, salary);
-            employees.add(employee);
+            Employee employee = new Employee (id, firstName, lastName, age, salary);
+            employees.add (employee);
         }
         Warehouse warehouse = new Warehouse(products, employees);
 
