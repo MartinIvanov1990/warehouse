@@ -8,7 +8,7 @@ public interface WarehouseService {
 
     void loginInWarehouse() throws FileNotFoundException;
 
-    Warehouse processFile(String fileName);
+    Warehouse processFile(String fileName) throws FileNotFoundException;
 
     void processMenu(String menuName);
 }
