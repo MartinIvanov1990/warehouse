@@ -41,7 +41,7 @@ try {
     fileReader = new Scanner(new File(inputFile2));
     productData = fileReader.nextLine();
 }  catch (FileNotFoundException e) {
-    System.out.println("Their is some problem with read creating or reading files ");
+    System.out.println("Their is some problem with creating or reading files ");
     }
 
         //TODO: Implement logic to enter file's names and invoke 'processFile' method
@@ -125,7 +125,7 @@ try {
 
     }
 } catch (Exception e) {
-    System.out.println("Their is some problem with read creating or reading files");
+    System.out.println("Their is some problem with creating or reading files");
 }
 
 
