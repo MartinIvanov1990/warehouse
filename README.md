@@ -24,7 +24,7 @@ The types of products are as follows:
 •	Drinks _ _
 •	sanitary _ _
 •	makeup _ _
-•	, decoration, others
+•	decoration, others
 
 It is important to note that different product categories have different characteristics and structure.
 
@@ -36,14 +36,14 @@ It is important to note that different product categories have different charact
 	employee_id, first_name, last_name, age, salary
 	1, Ivan, Ivanov, 45,550
 	2, Maria, Ivanova, 22,450
-3,Angel,Petkov,50,750
+	3,Angel,Petkov,50,750
 
 After the user opens the program, he is given the option to type in the file names from which the product and employee information will be read. Once these are loaded into the program, the user is given the option to log in as an employee or continue as a customer.
 
 Login as an employee:
 •	The system prompts the employee to enter their id and name
 •	In the event of a failed login, the user is prompted again to enter their details until a successfully entered combination
-•	Upon successful login (an employee with such data exists in the system), the employee is presented with the option of choosing from a menu of options
+•	Upon successful login (an employee with such data exists in the system), the employee is presented with the option of choosing from 		a menu of options
 •	The system should enable the following operations:
 •	Print all products
 •	Print all products sorted by:
