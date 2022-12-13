@@ -1,8 +1,8 @@
 package warehouse.project.service;
 
-import com.warehouse.entity.Product;
-import com.warehouse.entity.ShoppingBasket;
-import com.warehouse.exception.ProductQuantityMissingException;
+import warehouse.project.entity.Product;
+import warehouse.project.entity.ShoppingBasket;
+import warehouse.project.exception.ProductQuantityMissingException;
 
 import java.util.List;
 

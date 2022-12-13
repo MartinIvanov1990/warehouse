@@ -5,10 +5,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
-import com.warehouse.entity.Customer;
-import com.warehouse.entity.Product;
-import com.warehouse.entity.ShoppingBasket;
-import com.warehouse.entity.Warehouse;
+import warehouse.project.entity.Customer;
+import warehouse.project.entity.Product;
+import warehouse.project.entity.ShoppingBasket;
+import warehouse.project.entity.Warehouse;
 
 public class WarehouseMenuSelectorImpl implements WarehouseMenuSelector {
     private EmployeeService employeeService = new EmployeeServiceImpl();

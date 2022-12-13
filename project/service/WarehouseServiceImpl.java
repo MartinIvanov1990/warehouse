@@ -1,9 +1,9 @@
-package com.warehouse.service;
+package warehouse.project.service;
 
-import com.warehouse.entity.Customer;
-import com.warehouse.entity.Employee;
-import com.warehouse.entity.Product;
-import com.warehouse.entity.Warehouse;
+import warehouse.project.entity.Customer;
+import warehouse.project.entity.Employee;
+import warehouse.project.entity.Product;
+import warehouse.project.entity.Warehouse;
 
 import java.io.FileNotFoundException;
 import java.util.List;

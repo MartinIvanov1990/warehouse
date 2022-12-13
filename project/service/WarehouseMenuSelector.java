@@ -1,7 +1,7 @@
 package warehouse.project.service;
 
-import com.warehouse.entity.Customer;
-import com.warehouse.entity.Warehouse;
+import warehouse.project.entity.Customer;
+import warehouse.project.entity.Warehouse;
 
 public interface WarehouseMenuSelector {
     void selectOption(int optionNumber, boolean isEmployee, Warehouse warehouse, Customer customer);

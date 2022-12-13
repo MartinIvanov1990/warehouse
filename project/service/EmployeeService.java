@@ -1,7 +1,7 @@
 package warehouse.project.service;
 
-import com.warehouse.entity.Product;
-import com.warehouse.entity.Employee;
+import warehouse.project.entity.Product;
+import warehouse.project.entity.Employee;
 
 import java.util.List;
 

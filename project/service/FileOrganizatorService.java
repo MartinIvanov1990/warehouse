@@ -2,7 +2,7 @@ package warehouse.project.service;
 
 import java.util.List;
 
-import com.warehouse.entity.Product;
+import warehouse.project.entity.Product;
 
 public interface FileOrganizatorService {
 	

@@ -2,7 +2,7 @@ package warehouse.project.service;
 
 import java.util.Comparator;
 
-import com.warehouse.entity.Product;
+import warehouse.project.entity.Product;
 
 public class ExpiresComparator implements Comparator<Product> {
 

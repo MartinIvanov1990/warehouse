@@ -13,8 +13,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.warehouse.entity.Employee;
-import com.warehouse.entity.Product;
+import warehouse.project.entity.Employee;
+import warehouse.project.entity.Product;
 
 public class FileOrganizatorServiceImpl implements FileOrganizatorService {
 	private static final String CSV_SEPARATOR = ",";

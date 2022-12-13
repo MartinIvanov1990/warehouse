@@ -1,4 +1,4 @@
-package com.warehouse.entity;
+package warehouse.project.entity;
 
 import java.util.List;
 

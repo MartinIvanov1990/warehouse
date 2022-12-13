@@ -1,4 +1,4 @@
-package warehouse.project;
+package warehouse.project ;
 
 import static com.project.projectTest.WarehouseClass.sc;
 

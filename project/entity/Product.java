@@ -1,4 +1,4 @@
-package com.warehouse.entity;
+package warehouse.project.entity;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

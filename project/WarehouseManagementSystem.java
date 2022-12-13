@@ -2,13 +2,13 @@ package warehouse.project;
 
 import java.io.FileNotFoundException;
 
-import com.warehouse.service.WarehouseService;
-import com.warehouse.service.WarehouseServiceImpl;
+import warehouse.project.service.WarehouseService;
+import warehouse.project.service.WarehouseServiceImpl;
 
 public class WarehouseManagementSystem {
 	
     public static void main(String[] args) throws FileNotFoundException {
-    	WarehouseService warehouseService = (WarehouseService) new WarehouseServiceImpl();
+    	WarehouseService warehouseService = new WarehouseServiceImpl();
     	warehouseService.loginInWarehouse();
     }
 

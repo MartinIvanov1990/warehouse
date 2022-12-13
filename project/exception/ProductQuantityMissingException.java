@@ -1,4 +1,4 @@
-package com.warehouse.exception;
+package warehouse.project.exception;
 
 public class ProductQuantityMissingException extends RuntimeException{
 

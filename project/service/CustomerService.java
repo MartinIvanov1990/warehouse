@@ -1,7 +1,7 @@
-package com.warehouse.service;
+package warehouse.project.service;
 
-import com.warehouse.entity.Product;
-import com.warehouse.entity.ShoppingBasket;
+import warehouse.project.entity.Product;
+import warehouse.project.entity.ShoppingBasket;
 
 import java.util.List;
 
