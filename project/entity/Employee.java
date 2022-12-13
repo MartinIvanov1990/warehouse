@@ -1,4 +1,4 @@
-package warehouse.project.entity;
+package com.warehouse.entity;
 
 public class Employee {
 
@@ -6,7 +6,7 @@ public class Employee {
     private String first_name;
     private String last_name;
     private int age;
-    private double salary;
+    private Double salary;
 
     public Employee () {
 
@@ -52,28 +52,28 @@ public class Employee {
         this.age = age;
     }
 
-    public double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
+    
+    @Override
+    public String toString() {
+    	return "id: " + employee_id + " first name: " 
+    			+ first_name + " last name: " + last_name + " age: " 
+    			+ age + " salary: " + salary;
+    }
+    
+    public static Employee createEmployee(String[] attributes) {
+        int employeeId = Integer.parseInt(attributes[0]);
+        String firstName = attributes[1];
+        String lastName = attributes[2];
+        int age = Integer.parseInt(attributes[3]);
+        double salary = Double.parseDouble(attributes[4]);
 
-    private static boolean validateInput(String input) {
-
-        try {
-            int commandNumber = Integer.parseInt(input);
-            if (commandNumber <= 0 || commandNumber > 12) {
-                System.out.println("Invalid command! Try again! The input must be number between 1 and 12 ");
-                return false;
-            }
-
-            return true;
-        } catch (Exception NumberFormatException) {
-            System.out.println("Invalid command! Try again! The input must be number between 1 and 12 ");
-            return false;
-
-        }
+        return new Employee(employeeId, firstName, lastName, age, salary);
     }
 }

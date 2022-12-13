@@ -1,10 +1,11 @@
-package warehouse.project.entity;
+package com.warehouse.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingBasket {
 
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
     public ShoppingBasket() {
 

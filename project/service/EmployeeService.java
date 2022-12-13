@@ -1,7 +1,7 @@
-package warehouse.project.service;
+package com.warehouse.service;
 
-import warehouse.project.entity.Product;
-import warehouse.project.entity.Employee;
+import com.warehouse.entity.Product;
+import com.warehouse.entity.Employee;
 
 import java.util.List;
 
@@ -9,17 +9,21 @@ public interface EmployeeService {
 
     void printAllProducts(List<Product> products);
 
-    void printAllProductsSortedByOption(List<Product> products, String option);
+    void printAllProductsSortedByName(List<Product> products);
+    
+    void printAllProductsSortedByPrice(List<Product> products);
+
+    void printAllProductsSortedByExpiresIn(List<Product> products);
 
     void printProduct(List<Product> products, int id, String productName);
 
-    void printAllProductsWithPriceHigherThanCurrent(List<Product> products, double price);
+    void printAllProductsWithPriceHigherThanCurrent(List<Product> products, Double price);
 
-    void printAllProductsWithPriceLowerThanCurrent(List<Product> products, double price);
+    void printAllProductsWithPriceLowerThanCurrent(List<Product> products, Double price);
 
-    void printAllProductsWithQuantityHigherThanCurrent(List<Product> products, int quantity);
+    void printAllProductsWithQuantityHigherThanCurrent(List<Product> products, Integer quantity);
 
-    void printAllProductsWithQuantityLowerThanCurrent(List<Product> products, int quantity);
+    void printAllProductsWithQuantityLowerThanCurrent(List<Product> products, Integer quantity);
 
     void addProduct(List<Product> products, Product product);
 
@@ -31,11 +35,9 @@ public interface EmployeeService {
 
     void removeProduct(List<Product> products, int productId);
 
-    void printEmployeesSortedByOption(List<Employee> employees, String option);
+    void printEmployeesSortedByName(List<Employee> employees);
+    
+    void printEmployeesSortedBySalary(List<Employee> employees);
 
-    void printEmployeeMenu();
-
-    void login(int id, String name);
-
-    void operationsManagement(String operation);
+    void printMenu();
 }

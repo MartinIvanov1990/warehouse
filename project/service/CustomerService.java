@@ -1,7 +1,7 @@
-package warehouse.project.service;
-//Package
-import warehouse.project.entity.Product;
-import warehouse.project.entity.ShoppingBasket;
+package com.warehouse.service;
+
+import com.warehouse.entity.Product;
+import com.warehouse.entity.ShoppingBasket;
 
 import java.util.List;
 
@@ -9,13 +9,13 @@ public interface CustomerService {
 
     void printAllProducts(List<Product> products);
 
-    Product searchProductByCategory(String category, List<Product> products);
+    void searchProductByCategory(String category, List<Product> products);
 
-    Product searchProductByName(String name, List<Product> products);
+    void searchProductByName(String name, List<Product> products);
 
     void addProductToShoppingBasket(int productId, List<Product> products, int quantity, ShoppingBasket shoppingBasket);
 
-    double calculateShoppingBasketPrice(ShoppingBasket shoppingBasket);
+    void calculateShoppingBasketPrice(ShoppingBasket shoppingBasket);
 
-    void printCustomerMenu();
+    void printMenu();
 }

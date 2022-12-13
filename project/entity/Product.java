@@ -1,22 +1,23 @@
-package warehouse.project.entity;
+package com.warehouse.entity;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Product {
 
     private int product_id;
     private String name;
-    private double price;
-    private int quantity;
+    private Double price;
+    private Integer quantity;
     private String type;
     private String color;
-    private String expires_in;
+    private LocalDate expires_in;
 
     public Product() {
 
     }
 
-    public Product(int product_id, String name, double price, int quantity, String type, String color, String expires_in) {
+    public Product(int product_id, String name, Double price, int quantity, String type, String color, LocalDate expires_in) {
         this.product_id = product_id;
         this.name = name;
         this.price = price;
@@ -43,19 +44,19 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -75,11 +76,33 @@ public class Product {
         this.color = color;
     }
 
-    public String getExpires_in() {
+    public LocalDate getExpires_in() {
         return expires_in;
     }
 
-    public void setExpires_in(String expires_in) {
+    public void setExpires_in(LocalDate expires_in) {
         this.expires_in = expires_in;
+    }
+    
+    @Override
+    public String toString() {
+    	return "id: " + product_id + " name: " + name 
+    			+ " price: " + price + " quantity: " + quantity + " type: " 
+    			+ type + " color: " + color + " expires in: " + expires_in;
+    }
+    
+    public static Product createProduct(String[] attributes) {
+        int productId = Integer.parseInt(attributes[0]);
+        String name = attributes[1];
+        Double price = Double.parseDouble(attributes[2]);
+        int quantity = Integer.parseInt(attributes[3]);
+        String type = attributes[4];
+        String color = attributes[5];
+        LocalDate expiresIn = null;
+        if (attributes[6] != null && !attributes[6].isEmpty()) {
+        	expiresIn = LocalDate.parse(attributes[6], DateTimeFormatter.ofPattern("d/MM/yyyy"));
+        }
+              
+        return new Product(productId, name, price, quantity, type, color, expiresIn);
     }
 }

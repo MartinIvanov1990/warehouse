@@ -1,8 +1,8 @@
-package warehouse.project.entity;
+package com.warehouse.entity;
 
 public class Customer {
 
-    private ShoppingBasket shoppingBasket;
+    private ShoppingBasket shoppingBasket = new ShoppingBasket();
 
     public Customer() {
 
