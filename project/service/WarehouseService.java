@@ -1,4 +1,4 @@
-package com.warehouse.service;
+package warehouse.project.service;
 
 
 import java.io.FileNotFoundException;

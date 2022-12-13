@@ -1,4 +1,4 @@
-package com.warehouse.service;
+package warehouse.project.service;
 
 import com.warehouse.entity.Customer;
 import com.warehouse.entity.Warehouse;
