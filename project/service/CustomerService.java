@@ -1,5 +1,5 @@
 package warehouse.project.service;
-//P
+//Package
 import warehouse.project.entity.Product;
 import warehouse.project.entity.ShoppingBasket;
 
